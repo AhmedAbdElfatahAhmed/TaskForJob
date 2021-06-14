@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Educational RC</title>
+    <link rel="stylesheet" href="css/green-audio-player.min.css" />
+    <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container">
       <div class="caption">
+        <!-- start header -->
         <img src="icons/audio_icon.png" alt="audio-icon" />
         <h1>Listen and number. Then ask and answer.</h1>
+        <!-- End header -->
       </div>
+      <!-- start main page  -->
       <div class="border-container">
         <div class="content">
           <img src="img/a.png" alt="hungry" />
@@ -35,8 +40,21 @@
           <span></span>
         </div>
       </div>
+      <!-- End main page  -->
+      <!-- Start Footer -->
+      <footer>
+        <img src="icons/replay_icon.png" id="replay-icon" alt="" />
+        <div class="listen-audio">
+          <audio>
+            <source src="audio/listenToAnswer.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <img src="icons/showAns_icon.png" id="showAns-icon" alt="" />
+      </footer>
+      <!-- End Footer -->
     </div>
 
+    <script src="js/green-audio-player.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

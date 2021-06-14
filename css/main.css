@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* start header style  */
 .container {
   width: 1170px;
   padding-left: 10vw;
@@ -22,7 +23,8 @@
   font-weight: lighter;
   font-size: 2vw;
 }
-
+/* End header style */
+/* start main page style */
 .container .border-container {
   border: 4px solid #f5821f;
   border-radius: 12px;
@@ -34,6 +36,7 @@
   align-items: center;
   width: 65vw;
   height: 35vw;
+  position: relative;
 }
 
 .container .border-container .content {
@@ -61,8 +64,103 @@
   position: absolute;
   left: 10vw;
 }
+.container .border-container::before,
+.container .border-container::after {
+  content: "";
+  position: absolute;
+  width: 1.3vw;
+  height: 35vw;
+  background-color: #0fa0c5;
+}
+.container .border-container::before {
+  left: -1.4vw;
+}
 
-/* Start media query For extrta Small Screen */
+.container .border-container::after {
+  right: -1.4vw;
+}
+
+/* End main page style*/
+/* Start Footer style */
+footer {
+  background-color: #deecf6;
+  width: 67vw;
+  padding: 1vw 0;
+  position: relative;
+  right: 1vw;
+  display: flex;
+  align-items: center;
+}
+footer #replay-icon {
+  width: 4vw;
+  height: 4vw;
+  margin: 0 1.8vw;
+}
+
+/* Start custome green-audio-player */
+.green-audio-player {
+  background-color: #f5821f;
+  border-radius: 3vw;
+  -webkit-border-radius: 3vw;
+  -moz-border-radius: 3vw;
+  -ms-border-radius: 3vw;
+  -o-border-radius: 3vw;
+  width: 18vw;
+  height: 3.5vw;
+  position: relative;
+}
+.controls__current-time {
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+}
+.controls__current-time {
+  left: 4vw;
+}
+.controls__total-time {
+  display: none;
+}
+.controls__slider.slider {
+  background-color: #fff;
+  width: 8vw;
+  position: absolute;
+  left: 7vw;
+}
+.green-audio-player .slider .gap-progress .pin {
+  width: 1vw;
+  height: 1vw;
+  background-color: #fff;
+}
+
+path.play-pause-btn__icon,
+path.volume__speaker {
+  fill: #fff;
+}
+
+path.volume__speaker,
+.green-audio-player .volume .volume__controls {
+  display: none;
+}
+
+svg {
+  width: 12px;
+  transform: translateX(-5px);
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
+}
+/* End custome green-audio-player */
+
+footer #showAns-icon {
+  width: 5.5vw;
+  height: 4vw;
+  margin-left: 7vw;
+}
+/* End Footer style */
+
+/* Start media query */
+/* extrta Small Screen */
 @media (max-width: 575px) {
   .container .caption h1 {
     font-size: 10px;
@@ -70,5 +168,82 @@
   .container .caption img {
     width: 10px;
   }
+  .container .border-container::before {
+    height: 30vw;
+    left: -1.9vw;
+  }
+
+  .container .border-container::after {
+    height: 30vw;
+    right: -1.9vw;
+  }
+  .green-audio-player {
+    width: 110px;
+  }
+  .green-audio-player .slider .gap-progress .pin {
+    width: 8px;
+    height: 8px;
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+  }
+  svg {
+    width: 5px;
+    transform: translateX(-18px);
+    -webkit-transform: translateX(-18px);
+    -moz-transform: translateX(-18px);
+    -ms-transform: translateX(-18px);
+    -o-transform: translateX(-18px);
+  }
 }
-/* End  media query For extrta Small Screen */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Small Screen Rules  */
+  .green-audio-player {
+    width: 160px;
+  }
+  .green-audio-player .slider .gap-progress .pin {
+    width: 8px;
+    height: 8px;
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+  }
+  svg {
+    width: 8px;
+    transform: translateX(-15px);
+    -webkit-transform: translateX(-15px);
+    -moz-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    -o-transform: translateX(-15px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Medium Screen Rules  */
+  .green-audio-player {
+    width: 200px;
+  }
+  .green-audio-player .slider .gap-progress .pin {
+    width: 8px;
+    height: 8px;
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+  }
+  svg {
+    width: 10px;
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+  }
+}
+
+/* End  media query */
