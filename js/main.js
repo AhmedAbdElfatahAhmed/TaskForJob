@@ -44,7 +44,7 @@ audioIcon.onclick = () => {
 
 // declar a five numbers
 let numbers = [1, 2, 3, 4, 5];
-let itemsContent = document.querySelectorAll(".border-container .content");
+let imgs = document.querySelectorAll(".border-container .content img");
 let clickedSpan = document.querySelectorAll(".border-container .content span");
 clickedSpan.forEach((item) => {
   let ul = document.createElement("ul");
@@ -109,5 +109,17 @@ clickedSpan.forEach((item) => {
       spanElement[i].parentElement.classList.remove("disabled");
       spanElement[i].style.border = "2px solid rgb(0, 0, 0)";
     }
+  };
+});
+
+// play audio when clicked on image
+imgs.forEach((img) => {
+  img.onclick = (e) => {
+    document.getElementById(
+      e.target.parentElement.childNodes[5].dataset.answer
+    ).src = e.target.dataset.audiosrc;
+    document
+      .getElementById(e.target.parentElement.childNodes[5].dataset.answer)
+      .play();
   };
 });
