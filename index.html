@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Educational RC</title>
     <link rel="stylesheet" href="css/green-audio-player.min.css" />
-    <link rel="shortcut icon" href="" />
+    <!--to solve favicon.ico error  -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Start loading page  -->
+    <div class="loader-cover">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- End loading page  -->
     <div class="container">
       <div class="caption">
         <!-- start header -->
-        <img src="icons/audio_icon.png" alt="audio-icon" />
+        <img id="audio-icon" src="icons/audio_icon.png" alt="audio-icon" />
+        <audio id="listenAndNumber" src="audio/listenWhatyouDo.mp3"></audio>
         <h1>Listen and number. Then ask and answer.</h1>
         <!-- End header -->
       </div>
@@ -21,30 +33,30 @@
       <div class="border-container">
         <div class="content">
           <img src="img/a.png" alt="hungry" />
-          <span></span>
+          <span data-ans="2"></span>
         </div>
         <div class="content">
           <img src="img/b.png" alt="" />
-          <span></span>
+          <span data-ans="3"></span>
         </div>
         <div class="content">
           <img src="img/c.png" alt="" />
-          <span></span>
+          <span data-ans="5"></span>
         </div>
         <div class="content">
           <img src="img/d.png" alt="" />
-          <span></span>
+          <span data-ans="4"></span>
         </div>
         <div class="content">
           <img src="img/e.png" alt="" />
-          <span></span>
+          <span data-ans="1"></span>
         </div>
       </div>
       <!-- End main page  -->
       <!-- Start Footer -->
       <footer>
         <img src="icons/replay_icon.png" id="replay-icon" alt="" />
-        <div class="listen-audio">
+        <div class="toAnswer-audio">
           <audio>
             <source src="audio/listenToAnswer.mp3" type="audio/mpeg" />
           </audio>
@@ -55,6 +67,8 @@
     </div>
 
     <script src="js/green-audio-player.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
+
