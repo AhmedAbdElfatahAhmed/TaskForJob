@@ -1,4 +1,3 @@
-
 // initialize the Green Audio Player
 new GreenAudioPlayer(".toAnswer-audio");
 // methods for initializing several Green Audio Players:
@@ -31,10 +30,8 @@ let ul = document.createElement("ul");
     li.append(textli)
     ul.className="ul-style"
     li.className="li-style"
-    li.classList.add("selected")
   }
 
-  
 item.onclick=(e)=>
 {   
   ul.classList.toggle("ul-style");

@@ -89,20 +89,20 @@
   /* color: #0fa0c5; */
   color: transparent;
 }
-.container .border-container .content span[data-ans="2"]::after{
+.container .border-container .content span[data-answer="2"]::after{
   content: "2";
 }
 
-.container .border-container .content span[data-ans="3"]::after{
+.container .border-container .content span[data-answer="3"]::after{
   content: "3";
 }
-.container .border-container .content span[data-ans="5"]::after{
+.container .border-container .content span[data-answer="5"]::after{
   content: "5";
 }
-.container .border-container .content span[data-ans="4"]::after{
+.container .border-container .content span[data-answer="4"]::after{
   content: "4";
 }
-.container .border-container .content span[data-ans="1"]::after{
+.container .border-container .content span[data-answer="1"]::after{
   content: "1";
 }
 
@@ -127,10 +127,7 @@
   text-align: center;
   color: #000;
 }
-.selected
-{
-  /* visibility: hidden; */
-}
+
 .container .border-container::before,
 .container .border-container::after {
   content: "";
