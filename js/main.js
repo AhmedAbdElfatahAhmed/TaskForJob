@@ -74,7 +74,14 @@ clickedSpan.forEach((item) => {
       };
     });
   };
-
+  // to hide list of numbers which selected from it , when press in anywhere
+  document.addEventListener("click",(e)=>
+{
+  if(e.target!==item)
+  {
+    ul.classList.add("ul-style");
+  }
+})
   // function to correct Answer
   function correctAnwer() {
     item.style.setProperty("--check-answer", "#0fa0c5");
